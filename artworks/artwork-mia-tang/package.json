@@ -1,0 +1,50 @@
+{
+  "name": "artwork-mia-tang",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "complex.js": "^2.0.15",
+    "gsap": "^3.9.1",
+    "oimo": "^1.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "sass": "^1.49.0",
+    "three": "^0.136.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "publish": "cd ../../gallery && npm i && npm run publish"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "artwork": {
+    "title": "Kissing Circles",
+    "artist": "Mia Tang",
+    "description": "Kissing Circles is an artistic exploration of using a particular mathematical theorem, the Descartes' theorem, that can directly find the location of two circles inside and outside of three tangent circles. It is an exercise of pattern making using arithmetic and shaders, which are the main areas where I am passionate to learn more about.",
+    "tags": "threejs, webgl, circles, spheres"
+  }
+}

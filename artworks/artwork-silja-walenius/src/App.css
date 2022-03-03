@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.sliderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 200;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+
+  margin-top: 40px;
+  margin-left: 40px;
+
+  color: #ffffff;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  border-radius: 6px;
+  padding: 3px 0 3px 0;
+
+  margin-bottom: 40px;
+
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+slider::-moz-range-thumb {
+  background: #ffffff !important;
+}
+
+.label {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: 9px 27px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  display: inline-block;
+  border-radius: 70px;
+  margin-bottom: 20px;
+
+  transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button span {
+  letter-spacing: 12.5%;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.text {
+  background-color: transparent;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 40px;
+  text-align: center;
+  max-width: 25%;
+  z-index: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: italic;
+  cursor: default;
+
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.audioButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+
+.loadingScreen{
+  background-color: #F2A35A;
+  opacity: 1;
+  z-index: 300;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+
+@keyframes loadercircle{
+  0% {
+      opacity: 0.2;
+      transform: scale(0.7) translateY(50px);
+    }
+  100% {
+    opacity: 1.0;
+    transform: scale(1.0) translateY(0px);
+  }
+}
+
+.loadingCircle{
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  transform: scale(1);
+  transition: animation-play-state 0.5s ease-in-out;
+  animation: loadercircle 2s ease-in-out infinite alternate;
+}
+
+@keyframes soundbar {
+  0%{
+    transform: scaleY(1.0);
+  }
+  100%{
+    transform: scaleY(0.4);
+  }
+}
+
+.desktopButton{
+  display: none;
+}
+
+.mobileButton{
+  padding: 5px 0px 5px 5px;
+  margin-right: 0px;
+  margin-bottom: 0;
+  display: block;
+  border: none;
+}
+
+button.mobileButton:hover{
+  background-color: transparent !important;
+}
+
+.lines{
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.lines *{
+  display: inline-block;
+  background-color: #ffffff;
+  width: 5px;
+  height: 25px;
+  margin-right: 3px;
+  padding-bottom: 0;
+  bottom: 0;
+  transform-origin: bottom;
+  transition: all 0.4s ease-in-out;
+  animation: soundbar 0.4s ease-in-out infinite alternate-reverse;
+}
+
+.line1{
+  height: 20px;
+  animation: soundbar 0.3s ease-in-out infinite alternate;
+}
+.line3{
+  height: 15px;
+  animation: soundbar 0.3s ease-in-out infinite alternate-reverse;
+}
+
+.lines.paused *{ 
+  height: 3px !important;
+  animation: none !important;
+}
+
+
+/* mobile styles */
+
+@media (max-width: 600px) {
+  .App{
+    font-size: 14px;
+  }
+  
+  .sliderObject{
+    display: none;
+  }
+
+  .sliderContainer{
+    margin-left: 0px;
+    margin-top: 45px;
+    width: 100%;
+  }
+
+  .buttonContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 16px 0 16px;
+  }
+
+  button{ 
+    font-size: 14px;
+    padding: 4px 12px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+  }
+
+  .audioButton{
+    margin-right: 16px;
+    margin-bottom: 30px;
+  }
+
+  .desktopButton{
+    display: none;
+  }
+
+  .lines *{
+    width: 4px;
+    height: 20px;
+    margin-right: 3px;
+  }
+  
+  .line1{
+    height: 15px;
+  }
+  .line3{
+    height: 10px;
+  }
+
+
+  button.mobileButton:hover{
+    background-color: transparent !important;
+  }
+
+  .text{
+    bottom: 25px;
+  }
+
+}

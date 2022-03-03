@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e3222522.css",
+    "main.js": "./static/js/main.21470ec0.js",
+    "static/media/height.png": "./static/media/height.96f5c83de008c9ccd2f0.png",
+    "static/media/normal.jpg": "./static/media/normal.121a732c9609ef02cdc3.jpg",
+    "static/media/color.jpg": "./static/media/color.468c8189196e5b45c8a2.jpg",
+    "static/media/ambientOcclusion.jpg": "./static/media/ambientOcclusion.d01f793d784362bf72ae.jpg",
+    "index.html": "./index.html",
+    "main.e3222522.css.map": "./static/css/main.e3222522.css.map",
+    "main.21470ec0.js.map": "./static/js/main.21470ec0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3222522.css",
+    "static/js/main.21470ec0.js"
+  ]
+}
